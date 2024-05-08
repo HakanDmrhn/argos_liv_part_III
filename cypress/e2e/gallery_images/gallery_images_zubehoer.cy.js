@@ -6,6 +6,8 @@ describe('Integration test with visual testing - image popups Zubehör', functio
         cy.wait('@js_minify')
 
         cy.get('#big-img').click()
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of wandwinkel', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -36,6 +38,8 @@ describe('Integration test with visual testing - image popups Zubehör', functio
         // cy.wait('@js_minify')
 
         cy.get('#big-img').click()
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of gelenkklebeplatten', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

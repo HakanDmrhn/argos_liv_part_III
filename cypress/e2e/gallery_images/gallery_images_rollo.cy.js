@@ -8,7 +8,8 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         cy.wait('@js_minify')
 
         cy.get('#big-img').click()
-        // cy.percySnapshot('1st popup image of blackout-reflex-3517')
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of blackout-reflex-3517', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -17,7 +18,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('2nd popup image of blackout-reflex-3517')
         cy.argosScreenshot('2nd popup image of blackout-reflex-3517', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -26,7 +26,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('3rd popup image of blackout-reflex-3517')
         cy.argosScreenshot('3rd popup image of blackout-reflex-3517', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -35,7 +34,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('4th popup image of blackout-reflex-3517')
         cy.argosScreenshot('4th popup image of blackout-reflex-3517', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -51,7 +49,8 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         // 
 
         cy.get('.images a').first().click({ force: true })
-        // cy.percySnapshot('1st popup image of Rollo-Konfigurator')
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of Rollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -60,7 +59,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('2nd popup image of Rollo-Konfigurator')
         cy.argosScreenshot('2nd popup image of Rollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -69,7 +67,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('4th popup image of Rollo-Konfigurator')
         cy.argosScreenshot('3rd popup image of Rollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -78,7 +75,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('5th popup image of Rollo-Konfigurator')
         cy.argosScreenshot('4th popup image of Rollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -87,7 +83,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('6th popup image of Rollo-Konfigurator')
         cy.argosScreenshot('5th popup image of Rollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

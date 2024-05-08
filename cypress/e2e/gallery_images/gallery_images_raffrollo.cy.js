@@ -9,7 +9,8 @@ describe('Integration test with visual testing - image popups Raffrollo-Konfigur
         cy.wait('@js_minify')
 
         cy.get('#big-img').click()
-        // cy.percySnapshot('1st popup image of grada-9236')
+        cy.get('.lightbox_wrapper').should('be.visible')
+        
         cy.argosScreenshot('1st popup image of grada-9236', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -18,7 +19,6 @@ describe('Integration test with visual testing - image popups Raffrollo-Konfigur
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('2nd popup image of grada-9236')
         cy.argosScreenshot('2nd popup image of grada-9236', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -32,10 +32,9 @@ describe('Integration test with visual testing - image popups Raffrollo-Konfigur
     it('argos snapshots of product picture galleries - Konfigurator', function () {
 
         cy.visit('/raffrollo/raffrollo-konfigurator')
-        // 
+        cy.get('.lightbox_wrapper').should('be.visible')
 
         cy.get('.images a').first().click({ force: true })
-        // cy.percySnapshot('1st popup image of Raffrollo-Konfigurator')
         cy.argosScreenshot('1st popup image of Raffrollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

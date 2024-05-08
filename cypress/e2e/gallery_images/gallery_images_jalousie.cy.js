@@ -10,7 +10,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         cy.get('.blinds-type > ul > :nth-child(1)').click()
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(1) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('1st image of Jalousie-Konfigurator gallery 16 mm')
         cy.argosScreenshot('1st image of Jalousie-Konfigurator gallery 16 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -19,7 +18,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         });
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(2) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('2nd image of Jalousie-Konfigurator gallery 16 mm')
         cy.argosScreenshot('2nd image of Jalousie-Konfigurator gallery 16 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -34,7 +32,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         cy.get('.blinds-type > ul > :nth-child(2)').click()
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(1) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('1st image of Jalousie-Konfigurator gallery 25 mm')
         cy.argosScreenshot('1st image of Jalousie-Konfigurator gallery 25 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -43,7 +40,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         });
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(2) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('2nd image of Jalousie-Konfigurator gallery 25 mm')
         cy.argosScreenshot('2nd image of Jalousie-Konfigurator gallery 25 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -52,7 +48,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         });
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(3) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('3rd image of Jalousie-Konfigurator gallery 25 mm')
         cy.argosScreenshot('3rd image of Jalousie-Konfigurator gallery 25 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -66,7 +61,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         cy.get('.blinds-type > ul > :nth-child(3)').click()
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(1) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('1st image of Jalousie-Konfigurator gallery 50 mm')
         cy.argosScreenshot('1st image of Jalousie-Konfigurator gallery 50 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -75,7 +69,6 @@ describe('Integration test with visual testing - gallery images Jalousie-Konfigu
         });
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(2) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('2nd image of Jalousie-Konfigurator gallery 50 mm')
         cy.argosScreenshot('2nd image of Jalousie-Konfigurator gallery 50 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

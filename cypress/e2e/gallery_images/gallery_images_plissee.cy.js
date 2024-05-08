@@ -7,7 +7,8 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         cy.wait('@js_minify')
 
         cy.get('#big-img').click()
-        // cy.percySnapshot('1st popup image of basis-object-1504')
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -17,7 +18,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
 
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('2nd popup image of basis-object-1504')
         cy.argosScreenshot('2nd popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -26,7 +26,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('3rd popup image of basis-object-1504')
         cy.argosScreenshot('3rd popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -35,7 +34,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('4th popup image of basis-object-1504')
         cy.argosScreenshot('4th popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -44,7 +42,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('5th popup image of basis-object-1504')
         cy.argosScreenshot('5th popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -53,7 +50,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('6th popup image of basis-object-1504')
         cy.argosScreenshot('6th popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -62,7 +58,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('7th popup image of basis-object-1504')
         cy.argosScreenshot('7th popup image of basis-object-1504', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -74,10 +69,10 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
     it('argos snapshots of product picture galleries - Konfigurator', function () {
 
         cy.visit('/plissee/plissee-konfigurator')
-        // 
 
         cy.get('.images a').first().click({ force: true })
-        // cy.percySnapshot('1st popup image of Plissee-Konfigurator')
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of Plissee-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -86,7 +81,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('2nd popup image of Plissee-Konfigurator')
         cy.argosScreenshot('2nd popup image of Plissee-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -95,7 +89,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('3rd popup image of Plissee-Konfigurator')
         cy.argosScreenshot('3rd popup image of Plissee-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -104,7 +97,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('4th popup image of Plissee-Konfigurator')
         cy.argosScreenshot('4th popup image of Plissee-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -113,7 +105,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('5th popup image of Plissee-Konfigurator')
         cy.argosScreenshot('5th popup image of Plissee-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -122,7 +113,6 @@ describe('Integration test with visual testing - image popups Plissee-Konfigurat
         });
 
         cy.get('#img-popup-next').click()
-        // cy.percySnapshot('6th popup image of Plissee-Konfigurator')
         cy.argosScreenshot('6th popup image of Plissee-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

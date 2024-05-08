@@ -7,6 +7,8 @@ describe('Integration test with visual testing - image popups Doppelrollo-Konfig
         cy.wait('@js_minify')
 
         cy.get('#big-img').click()
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('1st popup image of remsa-5067', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -42,9 +44,10 @@ describe('Integration test with visual testing - image popups Doppelrollo-Konfig
     it('argos snapshots of product picture galleries - Konfigurator', function () {
 
         cy.visit('/doppelrollo/doppelrollo-konfigurator')
-        // 
 
         cy.get('.images a').last().click({ force: true })
+        cy.get('.lightbox_wrapper').should('be.visible')
+
         cy.argosScreenshot('4th popup image of Doppelrollo-Konfigurator', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
