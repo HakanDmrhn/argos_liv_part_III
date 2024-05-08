@@ -6,8 +6,6 @@ describe('Integration test with visual testing - simulated mobile testing on pli
 
     it('mobile testing on plissee category page', function () {
 
-        // cy.viewport() does not really work on percy at first sight 
-        // but needed for the mobile testing, e.g. for view of mobile PDP, tool tip, mobile tip etc.
         cy.viewport('iphone-6')
 
 
@@ -85,6 +83,6 @@ describe('Integration test with visual testing - simulated mobile testing on pli
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        cy.argosScreenshot('mobile plissee configurator with Wabe Glow 2161')
+        cy.argosScreenshot('mobile plissee-configurator with Wabe Glow 2161')
     })
 })

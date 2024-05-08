@@ -6,14 +6,12 @@ describe('Integration test with visual testing - simulated mobile testing on sch
 
     it('mobile testing on schiebegardinen category page', function () {
 
-        // cy.viewport() does not really work on percy at first sight 
-        // but needed for the mobile testing, e.g. for view of mobile PDP, tool tip, mobile tip etc.
-        cy.viewport('samsung-s10')
+        cy.viewport('iphone-6')
 
         // load category page
         cy.visit('/schiebegardinen/schiebegardinen-beige')
 
-        cy.percySnapshot('mobile view: /schiebegardinen/schiebegardinen-beige', { widths: [375] })
+        cy.argosScreenshot('mobile view: /schiebegardinen/schiebegardinen-beige')
 
         // activate tooltip of Schiebegardine Ukko 7330
         cy.get('img[alt="Schiebegardine Ukko 7330"]').click()
@@ -27,11 +25,12 @@ describe('Integration test with visual testing - simulated mobile testing on sch
                     cy.wrap($el).should('be.visible')
                 })
             })
-        cy.percySnapshot('active tooltip: Schiebegardine Ukko 7330', { widths: [375] })
+        cy.argosScreenshot('active tooltip: Schiebegardine Ukko 7330')
 
         // deactivate tooltip of Schiebegardine Ukko 7330
         cy.get('div.tooltip.active').click()
-        cy.percySnapshot('inactive tooltip: Schiebegardine Ukko 7330', { widths: [375] })
+        cy.argosScreenshot('inactive tooltip: Schiebegardine Ukko 7330')
+
 
         // activate tooltip of Schiebegardine Bonito 7336
         cy.get('img[alt="Schiebegardine Bonito 7336"]').click()
@@ -45,11 +44,12 @@ describe('Integration test with visual testing - simulated mobile testing on sch
                     cy.wrap($el).should('be.visible')
                 })
             })
-        cy.percySnapshot('active tooltip: Schiebegardine Bonito 7336', { widths: [375] })
+        cy.argosScreenshot('active tooltip: Schiebegardine Bonito 7336')
 
         // deactivate tooltip of Schiebegardine Bonito 7336
         cy.get('div.tooltip.active').click()
-        cy.percySnapshot('inactive tooltip: Schiebegardine Bonito 7336', { widths: [375] })
+        cy.argosScreenshot('inactive tooltip: Schiebegardine Bonito 7336')
+
 
         // activate tooltip of Schiebegardine Naru 7297
         cy.get('img[alt="Schiebegardine Naru 7297"]').click()
@@ -63,13 +63,12 @@ describe('Integration test with visual testing - simulated mobile testing on sch
                     cy.wrap($el).should('be.visible')
                 })
             })
-        cy.percySnapshot('active tooltip: Schiebegardine Naru 7297', { widths: [375] })
+        cy.argosScreenshot('active tooltip: Schiebegardine Naru 7297')
 
-        // go to mobile configurator of  Schiebegardine Naru 7297
+        // go to --> mobile configurator <-- of Schiebegardine Naru 7297
         cy.get('div.tooltip.active').find('.mobile_tip_content').click()
 
-        // new page will be loaded
-        // 
+        // new page will be loaded --> mobile configurator
 
         // wait till all 5 gallery images are present
         cy.get('.more-views li')
@@ -82,6 +81,8 @@ describe('Integration test with visual testing - simulated mobile testing on sch
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        cy.percySnapshot('mobile plissee configurator with Schiebegardine Naru 7297', { widths: [375] })
+        // cy.percySnapshot('mobile plissee configurator with Schiebegardine Naru 7297', { widths: [375] })
+        cy.argosScreenshot('mobile schibegardine-configurator with Schiebegardine Naru 7297')
+
     })
 })

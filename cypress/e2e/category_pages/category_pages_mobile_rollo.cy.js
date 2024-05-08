@@ -6,8 +6,6 @@ describe('Integration test with visual testing - simulated mobile testing on rol
 
     it('mobile testing on rollo category page', function () {
 
-        // cy.viewport() does not really work on percy at first sight 
-        // but needed for the mobile testing, e.g. for view of mobile PDP, tool tip, mobile tip etc.
         cy.viewport('iphone-6')
 
         // load category page
@@ -84,7 +82,7 @@ describe('Integration test with visual testing - simulated mobile testing on rol
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        cy.argosScreenshot('mobile rollo configurator with Levigo 3734')
+        cy.argosScreenshot('mobile rollo-configurator with Levigo 3734')
 
     })
 })

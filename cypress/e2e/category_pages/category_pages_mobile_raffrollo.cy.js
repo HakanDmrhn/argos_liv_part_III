@@ -6,8 +6,6 @@ describe('Integration test with visual testing - simulated mobile testing on raf
 
     it('mobile testing on raffrollo category page', function () {
 
-        // cy.viewport() does not really work on percy at first sight 
-        // but needed for the mobile testing, e.g. for view of mobile PDP, tool tip, mobile tip etc.
         cy.viewport('iphone-6')
 
 
@@ -84,6 +82,6 @@ describe('Integration test with visual testing - simulated mobile testing on raf
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        cy.argosScreenshot('mobile plissee configurator with Cocco 9010')
+        cy.argosScreenshot('mobile raffrollo-configurator with Cocco 9010')
     })
 })

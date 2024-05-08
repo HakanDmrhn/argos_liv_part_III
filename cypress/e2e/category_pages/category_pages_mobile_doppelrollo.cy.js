@@ -3,8 +3,6 @@ describe('Integration test with visual testing - simulated mobile testing on dop
 
     it('mobile testing on doppelrollo category page', function () {
 
-        // cy.viewport() does not really work on percy at first sight 
-        // but needed for the mobile testing, e.g. for view of mobile PDP, tool tip, mobile tip etc.
         cy.viewport('iphone-6')
 
         // load category page
@@ -83,7 +81,7 @@ describe('Integration test with visual testing - simulated mobile testing on dop
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        cy.argosScreenshot('mobile plissee configurator with Rayure 5004')
+        cy.argosScreenshot('mobile-doppelrollo configurator with Rayure 5004')
 
     })
 })
