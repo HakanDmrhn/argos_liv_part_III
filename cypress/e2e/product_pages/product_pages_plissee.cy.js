@@ -12,7 +12,9 @@ describe('Integration test with visual testing - Plissee product pages', functio
             cy.visit(link)
             cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));  
 
-             cy.argosScreenshot(link, {
+             //ignore youtube videos
+            cy.checkYouTube()
+            cy.argosScreenshot(link, {
                 viewports: [
                     "iphone-6", // Use device preset for iphone-6
                     { width: 1280, height: 1024 }, // Specify dimensions directly

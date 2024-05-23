@@ -17,6 +17,7 @@
 
 import "@argos-ci/cypress/support";
 import "cypress-real-events";
+require('dotenv').config();
 
 
 
@@ -66,7 +67,56 @@ beforeEach(() => {
     url: 'js/lazyload/load-min.js',
     hostname: 'www.livoneo.de',
   }).as('lazyload')
+})
 
+Cypress.Commands.overwrite('visit', (orig, url, options) => {
+  options = options || {};
+  if (process.env.STAGE_USER && process.env.STAGE_PASSW) {
+    options.auth = {
+      username: process.env.STAGE_USER,
+      password: process.env.STAGE_PASSW
+    };
+  }
+  return orig(url, options)
+});
 
+//custom command to check visibility of youtube videos
+Cypress.Commands.add('checkYouTube', () => {
+
+  // youtube-video css selector: .r-video
+  cy.get('body').then(($body) => {
+    if ($body.find('.r-video').length) {
+      // iframe was found
+      cy.log('YOUTUBE VIDEO FOUND')
+      cy.get('.r-video').invoke('attr', 'data-visual-test', 'transparent');
+    }
+    else {
+      cy.log('YOUTUBE VIDEO FOUND')
+    }
+  })
+
+  // youtube-video css selector: .rvideo
+  cy.get('body').then(($body) => {
+    if ($body.find('.video').length) {
+      // iframe was found
+      cy.log('YOUTUBE VIDEO FOUND')
+      cy.get('.video').invoke('attr', 'data-visual-test', 'transparent');
+    }
+    else {
+      cy.log('YOUTUBE VIDEO FOUND')
+    }
+  })
+
+  // youtube-video css selector: #video
+  cy.get('body').then(($body) => {
+    if ($body.find('#video').length) {
+      // iframe was found
+      cy.log('YOUTUBE VIDEO FOUND')
+      cy.get('#video').invoke('attr', 'data-visual-test', 'transparent');
+    }
+    else {
+      cy.log('YOUTUBE VIDEO FOUND')
+    }
+  })
 
 })

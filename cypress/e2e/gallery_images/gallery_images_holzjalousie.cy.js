@@ -62,7 +62,6 @@ describe('Integration test with visual testing - gallery images Holzjalousie-Kon
         cy.get('.blinds-type > ul > :nth-child(3)').click()
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(1) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('1st image of Holzjalousie-Konfigurator gallery 70 mm')
         cy.argosScreenshot('1st image of Holzjalousie-Konfigurator gallery 70 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -71,7 +70,6 @@ describe('Integration test with visual testing - gallery images Holzjalousie-Kon
         });
 
         cy.get('.gallery_jalousien_main_img > ul > :nth-child(2) > .img-responsive').click({ force: true })
-        // cy.percySnapshot('2nd image of Holzjalousie-Konfigurator gallery 70 mm')
         cy.argosScreenshot('2nd image of Holzjalousie-Konfigurator gallery 70 mm', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

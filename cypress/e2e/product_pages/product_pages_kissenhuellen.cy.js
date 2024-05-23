@@ -16,7 +16,6 @@ describe('Integration test with visual testing - Vorhänge product pages', funct
             cy.contains('40x40cm').click()
             cy.contains('50x50cm').click()
             
-            // cy.percySnapshot('Kissenhüllen: ' + link)
             cy.argosScreenshot('Kissenhüllen: ' + link, {
                 viewports: [
                     "iphone-6", // Use device preset for iphone-6

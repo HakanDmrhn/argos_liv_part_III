@@ -81,7 +81,6 @@ describe('Integration test with visual testing - simulated mobile testing on sch
         cy.get('#main-image').should('be.visible')
 
         // take snapshot of mobile configurator
-        // cy.percySnapshot('mobile plissee configurator with Schiebegardine Naru 7297', { widths: [375] })
         cy.argosScreenshot('mobile schibegardine-configurator with Schiebegardine Naru 7297')
 
     })

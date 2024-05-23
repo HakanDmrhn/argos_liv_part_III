@@ -29,7 +29,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Plissee Color Breeze 1740')
         cy.argosScreenshot('Hover: Plissee Color Breeze 1740', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -65,7 +64,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Plissee Cielo Perl 1904')
         cy.argosScreenshot('Hover: Plissee Cielo Perl 1904', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -108,7 +106,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Rollo Basic DimOut 3025')
         cy.argosScreenshot('Hover: Rollo Basic DimOut 3025', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -143,7 +140,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Rollo Triangolo 3882')
         cy.argosScreenshot('Hover: Rollo Triangolo 3882', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -186,7 +182,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Doppelrollo Acorda 5090')
         cy.argosScreenshot('Hover: Doppelrollo Acorda 5090', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -221,7 +216,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Doppelrollo Lacinia 5053')
         cy.argosScreenshot('Hover: Doppelrollo Lacinia 5053', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -263,7 +257,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Schiebegardine Bonito 7337')
         cy.argosScreenshot('Hover: Schiebegardine Bonito 7337', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -298,7 +291,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Schiebegardine Shana 7334')
         cy.argosScreenshot('Hover: Schiebegardine Shana 7334', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -340,7 +332,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Raffrollo Zadar 9021')
         cy.argosScreenshot('Hover: Raffrollo Zadar 9021', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -375,7 +366,6 @@ describe('Integration test with visual testing - hover on category pages', funct
                     cy.wrap($el).should('be.visible')
                 })
             })
-        // cy.percySnapshot('Hover: Raffrollo Luogo 9107')
         cy.argosScreenshot('Hover: Raffrollo Luogo 9107', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -400,7 +390,6 @@ describe('Integration test with visual testing - hover on category pages', funct
         // 
 
         cy.get('a[title="Sorrento Vorhang Weiß"]').siblings('.item__colors').children().eq(7).realHover().wait(500)
-        // cy.percySnapshot('Hover: Sorrento Vorhang Rose')
         cy.argosScreenshot('Hover: Sorrento Vorhang Rose', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -409,7 +398,6 @@ describe('Integration test with visual testing - hover on category pages', funct
         });
 
         cy.get('a[title="Velvet Vorhang Weiß"]').siblings('.item__colors').children().eq(9).realHover().wait(500)
-        // cy.percySnapshot('Hover: Vorhang Velvet Jade')
         cy.argosScreenshot('Hover: Vorhang Velvet Jade', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -427,7 +415,6 @@ describe('Integration test with visual testing - hover on category pages', funct
         // 
 
         cy.get('a[title="Teramo Verdunkelungsvorhang Grau"]').siblings('.item__colors').children().eq(3).realHover().wait(500)
-        // cy.percySnapshot('Hover: Vorhang Teramo Rot')
         cy.argosScreenshot('Hover: Vorhang Teramo Rot', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -436,7 +423,6 @@ describe('Integration test with visual testing - hover on category pages', funct
         });
 
         cy.get('a[title="Structuro Verdunkelungsvorhang Beige"]').siblings('.item__colors').children().eq(12).realHover().wait(500)
-        // cy.percySnapshot('Hover: Vorhang Structuro Flieder')
         cy.argosScreenshot('Hover: Vorhang Structuro Flieder', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6

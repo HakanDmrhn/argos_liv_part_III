@@ -128,9 +128,6 @@ describe('Integration test with visual testing - diverse submenus', function () 
         //****************************************************
         //******************VORHÄNGE SUBMENU******************
 
-        // VORHÄNGE mit Percy nicht testbar, denn Seite enthält zu viele Ressourcen.
-        //Fehlermeldung: "Exceeded the number of resources allowed in a single snapshot. Limit: 500. Given: 601."
-
         cy.get('.nav-primary.clearfix > :nth-child(6)').click()
 
 
