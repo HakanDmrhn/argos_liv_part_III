@@ -20,7 +20,6 @@ import "cypress-real-events";
 require('dotenv').config();
 
 
-
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 beforeEach(() => {
@@ -67,6 +66,7 @@ beforeEach(() => {
     url: 'js/lazyload/load-min.js',
     hostname: 'www.livoneo.de',
   }).as('lazyload')
+
 })
 
 Cypress.Commands.overwrite('visit', (orig, url, options) => {
@@ -81,42 +81,29 @@ Cypress.Commands.overwrite('visit', (orig, url, options) => {
 });
 
 //custom command to check visibility of youtube videos
-Cypress.Commands.add('checkYouTube', () => {
-
-  // youtube-video css selector: .r-video
-  cy.get('body').then(($body) => {
-    if ($body.find('.r-video').length) {
-      // iframe was found
-      cy.log('YOUTUBE VIDEO FOUND')
-      cy.get('.r-video').invoke('attr', 'data-visual-test', 'transparent');
-    }
-    else {
-      cy.log('YOUTUBE VIDEO FOUND')
-    }
-  })
-
-  // youtube-video css selector: .rvideo
-  cy.get('body').then(($body) => {
-    if ($body.find('.video').length) {
-      // iframe was found
-      cy.log('YOUTUBE VIDEO FOUND')
-      cy.get('.video').invoke('attr', 'data-visual-test', 'transparent');
-    }
-    else {
-      cy.log('YOUTUBE VIDEO FOUND')
-    }
-  })
+Cypress.Commands.add('ignoreYouTube', () => {
 
   // youtube-video css selector: #video
   cy.get('body').then(($body) => {
-    if ($body.find('#video').length) {
+    if ($body.find('iframe').length) {
       // iframe was found
-      cy.log('YOUTUBE VIDEO FOUND')
-      cy.get('#video').invoke('attr', 'data-visual-test', 'transparent');
+      cy.log('IFRAME FOUND')
+      cy.get('iframe').invoke('attr', 'data-visual-test', 'transparent');
     }
     else {
-      cy.log('YOUTUBE VIDEO FOUND')
+      cy.log('IFRAME NOT FOUND')
     }
   })
 
+  // youtube-video css selector: .video-container
+  cy.get('body').then(($body) => {
+    if ($body.find('.video-container').length) {
+      // youtube was found
+      cy.log('YOUTUBE VIDEO FOUND')
+      cy.get('.video-container').invoke('attr', 'data-visual-test', 'transparent');
+    }
+    else {
+      cy.log('YOUTUBE VIDEO NOT FOUND')
+    }
+  })
 })
