@@ -9,6 +9,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.visit('/plissee/plissee-gelb')
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
 
+
         //************************************************* TOOLTIP PLISSEE COLOR BREEZE 1740 **************************************************** */
         //****************************************************************************************************************************** */
 
@@ -44,7 +45,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.get('img[alt="Color Breeze 1740"]').siblings('.tooltip').should('not.be.visible')
 
 
-        //************************************************* TOOLTP PLISSEE Cielo Perl 1904  **************************************************** */
+        //************************************************* TOOLTP PLISSEE Cielo Perl 1904  ******************************************** */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Cielo Perl 1904"]').siblings('.tooltip').should('not.be.visible')
@@ -70,7 +71,7 @@ describe('Integration test with visual testing - hover on category pages', funct
                 { width: 1280, height: 1024 }, // Specify dimensions directly
             ]
         });
-        
+
 
         // zurücksetzen
         cy.get('a[title="Cielo Perl 1904"] .tooltip').then(($tooltip) => {
@@ -86,7 +87,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
         // 
 
-        //************************************************* TOOLTIP ROLLO Basic DimOut 3025 **************************************************** */
+        //************************************************* TOOLTIP ROLLO Basic DimOut 3025 ********************************************* */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Basic DimOut 3025"]').siblings('.tooltip').should('not.be.visible')
@@ -120,7 +121,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.get('img[alt="Basic DimOut 3025"]').siblings('.tooltip').should('not.be.visible')
 
-        //************************************************* TOOLTP Rollo Triangolo 3882  **************************************************** */
+        //************************************************* TOOLTP Rollo Triangolo 3882  ************************************************ */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Rollo Triangolo 3882"]').siblings('.tooltip').should('not.be.visible')
@@ -146,7 +147,7 @@ describe('Integration test with visual testing - hover on category pages', funct
                 { width: 1280, height: 1024 }, // Specify dimensions directly
             ]
         });
-        
+
 
         // zurücksetzen
         cy.get('a[title="Rollo Triangolo 3882"] .tooltip').then(($tooltip) => {
@@ -162,7 +163,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
         // 
 
-        //************************************************* TOOLTIP DOPPELROLLO Acorda 5090 **************************************************** */
+        //************************************************* TOOLTIP DOPPELROLLO Acorda 5090 ********************************************* */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Acorda 5090"]').siblings('.tooltip').should('not.be.visible')
@@ -196,7 +197,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.get('img[alt="Acorda 5090"]').siblings('.tooltip').should('not.be.visible')
 
-        //************************************************* TOOLTP Doppelrollo Lacinia 5053  **************************************************** */
+        //************************************************* TOOLTP Doppelrollo Lacinia 5053  ******************************************** */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Lacinia 5053"]').siblings('.tooltip').should('not.be.visible')
@@ -237,7 +238,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
         // 
 
-        //************************************************* TOOLTIP Schiebegardine Bonito 7337 **************************************************** */
+        //************************************************* TOOLTIP Schiebegardine Bonito 7337 ****************************************** */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Schiebegardine Bonito 7337"]').siblings('.tooltip').should('not.be.visible')
@@ -271,7 +272,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.get('img[alt="Schiebegardine Bonito 7337"]').siblings('.tooltip').should('not.be.visible')
 
-        //************************************************* TOOLTIP Schiebegardine Shana 7334  **************************************************** */
+        //************************************************* TOOLTIP Schiebegardine Shana 7334  ****************************************** */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Schiebegardine Shana 7334"]').siblings('.tooltip').should('not.be.visible')
@@ -312,7 +313,7 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
         // 
 
-        //************************************************* TOOLTIP Raffrollo Zadar 9021 **************************************************** */
+        //************************************************* TOOLTIP Raffrollo Zadar 9021 ************************************************ */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Zadar 9021"]').siblings('.tooltip').should('not.be.visible')
@@ -346,7 +347,7 @@ describe('Integration test with visual testing - hover on category pages', funct
 
         cy.get('img[alt="Zadar 9021"]').siblings('.tooltip').should('not.be.visible')
 
-        //************************************************* TOOLTIP Raffrollo Luogo 9107  **************************************************** */
+        //************************************************* TOOLTIP Raffrollo Luogo 9107  *********************************************** */
         //****************************************************************************************************************************** */
 
         cy.get('img[alt="Luogo 9107"]').siblings('.tooltip').should('not.be.visible')
@@ -381,15 +382,19 @@ describe('Integration test with visual testing - hover on category pages', funct
         cy.get('img[alt="Luogo 9107"]').siblings('.tooltip').should('not.be.visible')
     })
 
+
+
+    //************************************************* VORHANG HOVER TESTS  ******************************************************** */
+    //****************************************************************************************************************************** */
+
     it('hover on vorhaenge category page 1', function () {
 
         cy.visit('/oesenschal')
-        cy.wait('@js_minify')
 
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // 
+        // cy.wait('@js_minify')
 
-        cy.get('a[title="Sorrento Vorhang Weiß"]').siblings('.item__colors').children().eq(7).realHover().wait(500)
+        cy.get('a[title="Sorrento Vorhang Weiß"]').siblings('.item__colors').children().eq(7).realHover()//.wait(500)
         cy.argosScreenshot('Hover: Sorrento Vorhang Rose', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -397,7 +402,7 @@ describe('Integration test with visual testing - hover on category pages', funct
             ]
         });
 
-        cy.get('a[title="Velvet Vorhang Weiß"]').siblings('.item__colors').children().eq(9).realHover().wait(500)
+        cy.get('a[title="Velvet Vorhang Weiß"]').siblings('.item__colors').children().eq(9).realHover()//.wait(500)
         cy.argosScreenshot('Hover: Vorhang Velvet Jade', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -409,12 +414,11 @@ describe('Integration test with visual testing - hover on category pages', funct
     it('hover on vorhaenge category page 2', function () {
 
         cy.visit('/vorhaenge-kinderzimmer')
-        cy.wait('@js_minify')
 
         cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow, frequency: 150, timing: 50 }));
-        // 
+        // cy.wait('@js_minify')
 
-        cy.get('a[title="Teramo Verdunkelungsvorhang Grau"]').siblings('.item__colors').children().eq(3).realHover().wait(500)
+        cy.get('a[title="Teramo Verdunkelungsvorhang Grün"]').siblings('.item__colors').children().eq(3).realHover().wait(500)  // eq(3) = 3. Kind = Rot
         cy.argosScreenshot('Hover: Vorhang Teramo Rot', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
@@ -422,7 +426,7 @@ describe('Integration test with visual testing - hover on category pages', funct
             ]
         });
 
-        cy.get('a[title="Structuro Verdunkelungsvorhang Beige"]').siblings('.item__colors').children().eq(12).realHover().wait(500)
+        cy.get('a[title="Structuro Verdunkelungsvorhang Hellblau"]').siblings('.item__colors').children().eq(13).realHover().wait(500)  // eq(12) = 3. Kind = Rot
         cy.argosScreenshot('Hover: Vorhang Structuro Flieder', {
             viewports: [
                 "iphone-6", // Use device preset for iphone-6
