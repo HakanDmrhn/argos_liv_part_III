@@ -46,7 +46,6 @@ describe('Integration test with visual testing - image popups Rollo-Konfigurator
     it('argos snapshots of product picture galleries - Konfigurator', function () {
 
         cy.visit('/rollo/rollo-konfigurator')
-        // 
 
         cy.get('.images a').first().click({ force: true })
         cy.get('.lightbox_wrapper').should('be.visible')

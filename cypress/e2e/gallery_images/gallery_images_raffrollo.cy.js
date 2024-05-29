@@ -32,7 +32,6 @@ describe('Integration test with visual testing - image popups Raffrollo-Konfigur
     it('argos snapshots of product picture galleries - Konfigurator', function () {
 
         cy.visit('/raffrollo/raffrollo-konfigurator')
-        cy.get('.lightbox_wrapper').should('be.visible')
 
         cy.get('.images a').first().click({ force: true })
         cy.argosScreenshot('1st popup image of Raffrollo-Konfigurator', {
